@@ -50,7 +50,7 @@ def _apply_basic_numerical_operation(scope, op_type, input_names, output_name, c
             op_version = 6
     else:
         # Since ONNX-1.2, broadcasting behavior is Numpy-like, so we don't need to specify any attributes
-        op_version = 7
+        op_version = 8 
 
     container.add_node(op_type, input_names, output_name, op_version=op_version, name=name, **attrs)
 
